@@ -1,6 +1,8 @@
 import express from "express";
 import authRoute from "./routes/authRoutes.js";
+import posts from './routes/posts.js'
 import mongoose from "mongoose";
+import verify from './routes/middleware/verifyToken.js'
 import dotenv from "dotenv";
 const app = express();
 
@@ -21,6 +23,9 @@ app.use(express.json())
 
 //route middlware
 app.use("/api/user", authRoute);
+
+//protected Route
+app.use('/api/posts',verify, posts)
 
 app.listen(3000, () => {
   console.log(`Server listening on 3000`);
