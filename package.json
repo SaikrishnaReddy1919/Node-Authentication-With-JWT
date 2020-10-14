@@ -1,0 +1,19 @@
+{
+  "name": "node-aut-jwt",
+  "version": "1.0.0",
+  "description": "NodeJs API that can handle authentication using JWT.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index"
+  },
+  "author": "krishna",
+  "license": "ISC",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.5"
+  }
+}
